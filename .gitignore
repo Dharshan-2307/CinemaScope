@@ -1,0 +1,54 @@
+# Compiled class files
+*.class
+WEB-INF/classes/
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# IDE specific files
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Tomcat specific
+/target/
+/build/
+
+# Database credentials (security)
+# Note: You should externalize DB credentials before pushing
+# src/com/blog/DBUtil.java
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+
+# Keep the lib folder with MySQL connector
+!WEB-INF/lib/*.jar

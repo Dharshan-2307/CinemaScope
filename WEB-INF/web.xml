@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Add Blog Servlet -->
+    <servlet>
+        <servlet-name>AddBlog</servlet-name>
+        <servlet-class>com.blog.AddBlogServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddBlog</servlet-name>
+        <url-pattern>/addBlog</url-pattern>
+    </servlet-mapping>
+<servlet>
+    <servlet-name>DeleteBlog</servlet-name>
+    <servlet-class>com.blog.DeleteBlogServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DeleteBlog</servlet-name>
+    <url-pattern>/deleteBlog</url-pattern>
+</servlet-mapping>
+
+
+    <!-- Optional: 404 handling -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/index.jsp</location>
+    </error-page>
+
+</web-app>
