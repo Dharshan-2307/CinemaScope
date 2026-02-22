@@ -28,7 +28,6 @@
 
         <ul class="nav-links">
             <li><a href="index.jsp">Home</a></li>
-            <li><a href="blog.jsp">Blog</a></li>
             <li><a href="add-blog.jsp">Add Post</a></li>
             <li><a href="about.jsp">About</a></li>
         </ul>
@@ -53,8 +52,10 @@
 Connection con = null;
 PreparedStatement ps = null;
 ResultSet rs = null;
+boolean hasBlogs = false;
 
 try {
+
     con = DBUtil.getConnection();
 
     ps = con.prepareStatement(
@@ -64,6 +65,7 @@ try {
     rs = ps.executeQuery();
 
     while (rs.next()) {
+        hasBlogs = true;
 %>
 
         <div class="blog-card">
@@ -95,8 +97,16 @@ try {
 
 <%
     }
+
+    if (!hasBlogs) {
+%>
+        <p style="text-align:center; margin-top:30px; color:#bbb;">
+            No blogs yet. Be the first to publish one 🚀
+        </p>
+<%
+    }
+
 } catch (Exception e) {
-    e.printStackTrace();
 %>
 
         <p style="color:red; text-align:center;">
@@ -104,14 +114,17 @@ try {
         </p>
 
 <%
+    e.printStackTrace();
+
 } finally {
+
     if (rs != null) rs.close();
     if (ps != null) ps.close();
     if (con != null) con.close();
 }
 %>
 
-    </div> <!-- ✅ blog-grid CLOSED -->
+    </div>
 </section>
 
 <!-- ================= LOAD MORE (UI ONLY) ================= -->
