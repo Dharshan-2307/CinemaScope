@@ -13,18 +13,16 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav class="navbar container">
-            <div class="logo">CinemaScope</div>
-            <ul class="nav-links">
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="blog.jsp">Blog</a></li>
-                <li><a href="add-blog.jsp">Add Post</a></li>
-                <li><a href="about.jsp">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
+   <header>
+    <nav class="navbar container">
+        <div class="logo">CinemaScope</div>
+        <ul class="nav-links">
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="add-blog.jsp">Add Post</a></li>
+            <li><a href="about.jsp">About</a></li>
+        </ul>
+    </nav>
+</header>
     <!-- About Section -->
     <main class="about-section reveal">
         <h2>About CinemaScope</h2>
